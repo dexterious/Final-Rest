@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="interface.css" />
+	<style>
+		  body {background-color:white}
+		  h1   {color:blue}
+		  p    {color:green}
+	</style>
+</head>
+
+<body onload="startFunction()">
+  <script type="text/javascript" src="main.js"></script>
+	<div class="newsfeed" id="newsfeed">
+	
+	</div>
+	<div class="center">
+		<div class="tabs">
+			<div class="tab" onclick="showMap()">Village</div>
+			<div class="tab" onclick="showJournal()">Journal</div>
+			<div class="tab" onclick="showAchievements()">Memories</div>
+			<div class="tab" onclick="showUpgrades()">Upgrades</div>
+			<div class="tab" onclick="showOptions()">Options</div>
+		</div>
+		<div class="resources" id="resources">Resources: 0</div>
+		<div class="map" id="map">Map</div>
+		<div class="map" id="journal">Journal</div>
+		<div class="map" id="upgrades">
+			Upgrades<br>
+			<div class="button" id="bWell">
+				<a onclick="buyUpgrade(upgradeWell)"></a>
+				<div class="timer" id="tWell"></div>
+				Build well
+			</div>
+		</div>
+		<div class="map" id="achievements">Memories</div>
+		<div class="map" id="options">Options</div>
+		<div class="notificationsWindow" id="notificationsWindow"></div>
+	</div>
+	<div class="units" id="unitPane">
+		<div class="button" id="bForage">
+			<a onclick="forage()"></a>
+			<div class="timer" id="tForage"></div>
+			<div id="lForage">Forage</div>
+			
+		</div>
+		<div class="button" id="bFire">
+			<a onclick="buyGeneric(uFire)"></a>
+			<div class="timer" id="tFire"></div>
+			Light fire<br>
+			Fires: <span id="lFire">0</span><br>
+			Cost: <span id="cFire">10</span>
+		</div>
+		<div class="button" id="bShelter">
+			<a onclick="buyGeneric(uShelter)"></a>
+			<div class="timer" id="tShelter"></div>
+			Build shelter<br>
+			Shelters: <span id="lShelter">0</span><br>
+			Cost: <span id="cShelter">10</span>
+		</div>
+		<div class="button" id="bDwelling">
+			<a onclick="buyGeneric(uDwelling)"></a>
+			<div class="timer" id="tDwelling"></div>
+			Build dwelling<br>
+			Dwellings: <span id="lDwelling">0</span><br>
+			Cost: <span id="cDwelling">10</span>
+		</div>
+		<div class="button" id="bStorehouse">
+			<a onclick="buyGeneric(uStorehouse)"></a>
+			<div class="timer" id="tStorehouse"></div>
+			Build storehouse<br>
+			Storehouse: <span id="lStorehouse">0</span><br>
+			Cost: <span id="cStorehouse">20</span>
+		</div>
+	</div>
+</body>
+
+</html>
